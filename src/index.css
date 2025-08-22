@@ -1,82 +1,56 @@
 @tailwind base;
-
 @tailwind components;
-
 @tailwind utilities;
 
 /* Definition of the design system. All colors, gradients, fonts, etc should be defined here.
-
-All colors MUST be HSL.
-
+   All colors MUST be HSL.
 */
 
 @layer base {
+  :root {
+    /* Nature-inspired sustainability color palette */
+    --background: 120 20% 98%;
+    --foreground: 140 30% 15%;
+    --card: 0 0% 100%;
+    --card-foreground: 140 30% 15%;
+    --popover: 0 0% 100%; /* ✅ fixed (added missing hue 0) */
+    --popover-foreground: 140 30% 15%;
 
-:root {
+    /* Primary green for sustainability */
+    --primary: 142 76% 36%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 142 70% 50%;
 
-/* Nature-inspired sustainability color palette */
+    /* Earth tones */
+    --secondary: 35 40% 85%;
+    --secondary-foreground: 35 80% 25%;
 
---background: 120 20% 98%;
+    --muted: 120 15% 95%;
+    --muted-foreground: 120 10% 45%;
 
---foreground: 140 30% 15%;
+    /* Accent orange for recycling */
+    --accent: 25 95% 65%;
+    --accent-foreground: 0 0% 100%;
 
---card: 0 0% 100%;
+    --destructive: 0 84.2% 60.2%; /* ✅ fixed (proper HSL format) */
+    --destructive-foreground: 0 0% 100%;
 
---card-foreground: 140 30% 15%;
+    --border: 120 20% 88%;
 
---popover: 00% 100%;
-
---popover-foreground: 140 30% 15%;
-
-/* Primary green for sustainability */
-
---primary: 142 76% 36%;
-
---primary-foreground: 0 0% 100%;
-
---primary-glow: 142 70% 50%;
-
-/* Earth tones */--secondary: 35 40% 85%; --secondary-foreground: 35 80% 25%;
-
---muted: 120 15% 95%;
-
---muted-foreground: 120 10% 45%;
-
-/* Accent orange for recycling */
-
---accent: 25 95% 65%;
-
---accent-foreground: 0 0% 100%;
-
---destructive: 084.2% 60.2%; --destructive-foreground: 0 0% 100%;
-
---border: 120 20% 88%;
---sidebar-primary: 142 70% 50%;
-
---sidebar-primary-foreground: 140 15% 8%;
-
---sidebar-accent: 140 15% 15%;
-
---sidebar-accent-foreground: 120 20% 95%;
-
---sidebar-border: 140 15% 20%;
-
---sidebar-ring: 142 70% 50%;
-
-}
-
+    --sidebar-primary: 142 70% 50%;
+    --sidebar-primary-foreground: 140 15% 8%;
+    --sidebar-accent: 140 15% 15%;
+    --sidebar-accent-foreground: 120 20% 95%;
+    --sidebar-border: 140 15% 20%;
+    --sidebar-ring: 142 70% 50%;
+  }
 }
 
 @layer base {
-
-* {
-
-@apply border-border;
-
-}
-
-body {
-
-@apply bg-background text-foreground;
-
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
 }
